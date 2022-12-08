@@ -1,0 +1,20 @@
+name: ForiegnStudents
+packages:
+- path: studentapp
+- path: wheel
+- path: requests
+- path: asgiref
+- path: charset_normalizer
+- path: pytz
+- path: static
+- path: django
+- path: setuptools
+- path: _distutils_hack
+- path: maindir
+- path: idna
+- path: pip
+- path: urllib3
+- path: pkg_resources
+- path: certifi
+- path: tzdata
+- path: sqlparse

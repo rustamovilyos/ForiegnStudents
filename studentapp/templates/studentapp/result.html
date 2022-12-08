@@ -1,0 +1,34 @@
+{% load static %}
+{% block main %}
+<a href="{% url 'studentapp:scores' %}"><button>My Account</button></a>
+<dl>
+    {% for question in questions_l %}
+    <dt>
+        <p>
+            {{ forloop.counter }}.{{ question.text }}
+        </p>
+    </dt>
+    {% for otvet in question.choice_set.all %}
+    {% if otvet.correct %}
+    <dd style="color: green;">
+        <strong>
+            {{ otvet.answers }}
+        </strong>
+    </dd>
+    {% elif otvet.id in answer %}
+    <dd style="color:red;">
+        {{ otvet.answers }}
+    </dd>
+    {% else %}
+    <dd>
+        {{ otvet.text }}
+    </dd>
+    {% endif %}
+    {% endfor %}
+    <hr>
+    {% endfor %}
+    <a style="text-decoration:none;" href="{% url 'studentapp:index' %}"><button>Home </button></a>
+</dl>
+
+
+{% endblock %}

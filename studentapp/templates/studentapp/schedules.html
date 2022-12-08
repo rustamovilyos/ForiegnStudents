@@ -1,0 +1,64 @@
+{% extends './wrapper_base.html' %}
+{% load static %}
+
+{% block main %}
+<link href="{% static 'studentapp/assets/css/normalize.css' %}" rel="stylesheet">
+  <link href="{% static 'studentapp/assets/css/material.css' %}" rel="stylesheet">
+  <link href="{% static 'studentapp/assets/css/schedul.css' %}" rel="stylesheet">
+      <div class="projects-section">
+        <div class="table-users">
+          <div class="headering">Расписания</div>
+
+          <table cellspacing="0">
+             <tr>
+                <th>Картинка</th>
+                <th>Ф.И.О.</th>
+                <th>Предмет</th>
+                <th>Кабинет</th>
+                <th>Время</th>
+             </tr>
+         <tbody id='app'>
+             <tr>
+                <td><img src='teachPhoto[0]' alt="404" /></td>
+                <td data-title="ФИО">{* teachFName[0] *}. {* teachLName[0] *}. {* teachMName[0] *}</td>
+                 <td data-title="Предмет">{* subject[0]*} <strong>({* lesson_type[0]*})</strong></td>
+                <td data-title="Кабинет">{* auditory[0] *}</td>
+                <td data-title="Время">{* lessonTime[0] *}</td>
+             </tr>
+        
+             <tr>
+                <td><img src="{% static 'studentapp/assets/images/19.png' %}" alt="" /></td>
+                 <td data-title="ФИО">{* teachFName[0] *}</td>
+                <td data-title="Предмет">{* subject[0]*} <strong>({* lesson_type[0]*})</strong></td>
+                <td data-title="Кабинет">{* auditory[0] *}</td>
+                <td data-title="Время">{* lessonTime[0] *}</td>
+             </tr>
+        
+             <tr>
+                <td><img src="{% static 'studentapp/assets/images/20.png' %}" alt="" /></td>
+                <td>Ивашенко В. П. (к.т.н., доцент)</td>
+                <td>МРЗвИС(ЛК)</td>
+                <td>612-5 к.</td>
+                <td>17:25 - 18:45</td>
+             </tr>
+             
+             <tr>
+                <td><img src="{% static 'studentapp/assets/images/21.png' %}" alt="" /></td>
+                <td>Ковалёв М. В. (м.т.н.)</td>
+                <td>ОС(ЛР)</td>
+                <td>406-5 к.</td>
+                <td>19:00 - 20:20</td>
+             </tr>
+         </tbody>
+          </table>
+        </div>
+      </div>
+<script src="{% static 'studentapp/assets/js/script.js' %}"></script>
+<script src="{% static 'studentapp/assets/js/material.js' %}"></script>
+<script src="{% static 'studentapp/assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'studentapp/assets/js/chat-bot.js' %}"></script>
+<script src="{% static 'studentapp/assets/js/maps.js' %}"></script>
+<script src="{% static 'studentapp/assets/js/Tabling.py' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+      {% endblock %}
+

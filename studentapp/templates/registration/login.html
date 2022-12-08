@@ -1,0 +1,77 @@
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="ru-ru">-->
+<!--<head>-->
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Вход | Student Helper</title>-->
+<!--    <meta name="keywords" content="Идеи, Вдохновения, Контент, Готовые материалы, Шпаргалки, Формулы, Подсказки">-->
+<!--    <meta name="description" content="Student Helper - лучшая в мире образовательная платформа для всех. Найдите для себя онлайн-курс, ответ на любой вапрос и поддробные анализ вашых не доставков с лучшими рекомендациями на Foreign.Student.by и начните осваивать новые навыки.">-->
+<!--    &lt;!&ndash; Fav and touch icons &ndash;&gt;-->
+<!--    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'studentapp/assets/images/FS-big.png' %}">-->
+<!--    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'studentapp/assets/images/FS.png' %}">-->
+<!--    <link rel="apple-touch-icon-precomposed" href="{% static 'studentapp/assets/images/FS.png' %}">-->
+<!--    <link rel="shortcut icon" href="{% static 'studentapp/assets/images/FS.png' %}">-->
+<!--    &lt;!&ndash; Custom Stylesheet &ndash;&gt;-->
+<!--    <link href="{% static 'studentapp/assets/css/login.css' %}" rel="stylesheet">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <main>-->
+<!--        <div class="form-structor">-->
+<!--            <div class="signup">-->
+<!--                <h2 class="form-title" id="signup"><span>или</span>Зарегистрируетесь</h2>-->
+<!--                <form action="{% url 'login' %}" class="form-holder">-->
+<!--                    <input type="text" class="input" placeholder="Ф.И.О." />-->
+<!--                    <input type="email" class="input" placeholder="Электронный адрес" />-->
+<!--                    <input type="password" class="input" placeholder="Пароль" />-->
+<!--                </form>-->
+<!--                <button class="submit-btn">Регистрация</button>-->
+<!--            </div>-->
+<!--            <div class="login slide-up">-->
+<!--                <form class="center">-->
+<!--                    <h2 class="form-title" id="login"><span>или</span>Войдите</h2>-->
+<!--                    <div class="form-holder">-->
+<!--                        <input type="text" class="input" placeholder="Ф.И.О." />-->
+<!--                        <input type="password" class="input" placeholder="Пароль" />-->
+<!--                    </div>-->
+<!--&lt;!&ndash;                    <button class="submit-btn">Авторизоваться</button>&ndash;&gt;-->
+<!--                    <input class="submit-btn"    type="submit" value="Авторизоваться">-->
+<!--                    <input class="submit-btn" type="hidden" name="next" value="{% url 'studentapp:maps' %}">-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </main>-->
+
+<!--    &lt;!&ndash; script &ndash;&gt;-->
+<!--    <script  src="{% static 'studentapp/assets/js/jquery.easing' %}"></script>-->
+<!--    <script  src="{% static 'studentapp/assets/js/jquery.js' %}"></script>-->
+<!--    <script  src="{% static 'studentapp/assets/js/jquery.ui.js' %}"></script>-->
+<!--    <script  src="{% static 'studentapp/assets/js/modernizer.js' %}"></script>-->
+<!--    <script src="{% static 'studentapp/assets/js/login.js' %}"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--    &lt;!&ndash;-->
+<!--    <svg width="36" height="44" viewBox="0 0 36 44" xmlns="http://www.w3.org/2000/svg"><title>ic_verified_user_black_24px</title><g fill="none" fill-rule="evenodd"><path d="M-6-2h48v48H-6V-2z"/><path d="M18 0L0 8v12c0 11.1 7.68 21.48 18 24 10.32-2.52 18-12.9 18-24V8L18 0zm-4 32l-8-8 2.82-2.82L14 26.34l13.18-13.18L30 16 14 32z" fill="#55BF76"/></g></svg>-->
+<!--    &ndash;&gt;-->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Login Page</h1>
+<hr>
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Login">
+    <input type="hidden" name="next" value="{% url 'studentapp:assistent' %}">
+</form>
+</body>
+</html>

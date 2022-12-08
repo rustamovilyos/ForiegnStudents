@@ -1,0 +1,124 @@
+{% extends './wrapper_base.html' %}
+{% load static %}
+{% load random_numbers %}
+{% block main %}
+<div class="projects-section" style="background-color: rgb({% random_int 200 255  %},{% random_int 210 255 %},{% random_int 200 255  %}); border: groove 5px">
+    <article>
+    <div><h2>Вопросы</h2></div>
+
+<form action="{% url 'studentapp:check' %}">
+    {% for vopros in vse_voprosi %}
+    <p>{{ vopros.text }}</p> <br>
+
+    {% for otvet in vopros.choice_set.all %}
+    <div class="quest-panel">
+        <input type="radio" id="vopros" name="{{ vopros.id }}" value="{{ otvet.id }}" required>
+        <label for="vopros">{{otvet.answers}} </label><br>
+    </div>
+    {% endfor %}
+    <hr>
+    {% endfor %}
+
+    <button type="submit" class="custom-btn btn-12" value="проверка"><span>Проверка ответов</span><span>Отправить</span></button>
+</form>
+<hr>
+<a href="{% url 'studentapp:assistent' %}">
+    <button type="submit" class="custom-btn btn-12"><span>Курсы</span><span>Назад</span></button>
+</a>
+    </article>
+</div>
+
+<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="{% static 'studentapp/assets/js/maps.js' %}"></script>
+{% endblock %}
+
+{% block message %}
+<div class="messages-section">
+    <button class="messages-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             class="feather feather-x-circle">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="15" y1="9" x2="9" y2="15"/>
+            <line x1="9" y1="9" x2="15" y2="15"/>
+        </svg>
+    </button>
+
+    <div class="legend">
+            <div>
+                <h2>Облако хештегов</h2>
+            </div>
+
+            <div>
+                <button class="market"> #тест</button>
+                <button class="polygraphy"> #бгуир_тесты</button>
+                <button class="campus"> #знания</button>
+                <button class="translation"> #проверка_знание</button>
+            </div>
+    </div>
+    <div class="projects-section-header">
+        <a href="{% url 'studentapp:schedules' %}"><p>Расписания</p></a>
+    </div>
+    <div class="wrap">
+          <div class="table-wrapper">
+            <table class="table-responsive card-list-table">
+              <thead>
+                <tr>
+                  <th>Предмет</th>
+                  <th>Кабинет</th>
+                  <th>Время</th>
+                </tr>
+              </thead>
+               <tbody id='app'>
+                <tr>
+                  <td data-title="Группа">   {* group[0] *}</td>
+                  <td data-title="День">   {* weekDay[0] *}</td>
+                  <td data-title="Предмет">   {* subject[0]*} <strong>({* lesson_type[0]*})</strong></td>
+                  <td data-title="Кабинет">   {* auditory[0] *}</td>
+                  <td data-title="Время">   {* lessonTime[0] *}</td>
+                </tr>
+               <tr>
+                  <td data-title="Группа">   {* group[0] *}</td>
+                  <td data-title="День">   {* weekDay[1] *}</td>
+                  <td data-title="Предмет">   {* subject[1]*} <strong>({* lesson_type[1]*})</strong></td>
+                  <td data-title="Кабинет">   {* auditory[1] *}</td>
+                  <td data-title="Время">   {* lessonTime[1] *}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+     <div id="live-chat">
+
+        <header class="clearfix2">
+            <a href="#" class="chat-close">x</a>
+            <h4>Helper Bot</h4>
+            <span class="chat-message-counter">1</span>
+        </header>
+
+        <div class="chat">
+            <div class="chat-history">
+                <div class="chat-message clearfix2">
+                    <img src="{% static 'studentapp/assets/images/fs.png' %}" alt="" width="32" height="32">
+                    <div class="chat-message-content clearfix2">
+                        <h5>Bot</h5>
+                        <p>Добро пожаловать на платформу поддержки студентам</p>
+                    </div>
+                    <!-- end chat-message-content -->
+                </div>
+            </div>
+            <!-- end chat-history -->
+            <form id="chating" onsubmit="return false;">
+                <fieldset>
+                    <input id="text" type="text" placeholder="Что вы хотите узнать" autofocus>
+                    <input id="text" type="hidden">
+                </fieldset>
+            </form>
+        </div>
+        <!-- end chat -->
+
+    </div>
+    <!-- end live-chat -->
+
+</div>
+{% endblock %}

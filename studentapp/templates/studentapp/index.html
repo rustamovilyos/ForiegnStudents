@@ -1,0 +1,503 @@
+{% extends './wrapper_base.html' %}
+{% load static %}
+
+        {% block main %}
+        <div class="projects-section">
+        <div class='centered'>
+          <div id='schedule'>
+            <div class='s-legend'>
+              <div class='s-cell s-head-info'>
+                <div class='s-name'>Неделя</div>
+              </div>
+              <div class='s-week-day s-cell'>
+                <div class='s-day'>Пн</div>
+              </div>
+              <div class='s-week-day s-cell'>
+                <div class='s-day'>Вт</div>
+              </div>
+              <div class='s-week-day s-cell'>
+                <div class='s-day'>Ср</div>
+              </div>
+              <div class='s-week-day s-cell'>
+                <div class='s-day'>Че</div>
+              </div>
+              <div class='s-week-day s-cell'>
+                <div class='s-day'>Пя</div>
+              </div>
+            </div>
+            <div class='s-container s-block'>
+              <div class='s-head-info'>
+                <div class='s-head-hour'>
+                  <div class='s-number'>0</div>
+                  <div class='s-hourly-interval'>7.10-7.55</div>
+                </div>
+                <div class='s-head-hour'>
+                  <div class='s-number'>1</div>
+                  <div class='s-hourly-interval'>8.00 - 8.45</div>
+                </div>
+                <div class='s-head-hour'>
+                  <div class='s-number'>2</div>
+                  <div class='s-hourly-interval'>8.50 - 9.35</div>
+                </div>
+                <div class='s-head-hour'>
+                  <div class='s-number'>3</div>
+                  <div class='s-hourly-interval'>9.45 - 10.30</div>
+                </div>
+                <div class='s-head-hour'>
+                  <div class='s-number'>4</div>
+                  <div class='s-hourly-interval'>10.50 - 11.35</div>
+                </div>
+                <div class='s-head-hour'>
+                  <div class='s-number'>5</div>
+                  <div class='s-hourly-interval'>11.45 - 12.30</div>
+                </div>
+                <div class='s-head-hour'>
+                  <div class='s-number'>6</div>
+                  <div class='s-hourly-interval'>12.50 - 13.35</div>
+                </div>
+                <div class='s-head-hour'>
+                  <div class='s-number'>7</div>
+                  <div class='s-hourly-interval'>13.45 - 14.30</div>
+                </div>
+                <div class='s-head-hour'>
+                  <div class='s-number'>8</div>
+                  <div class='s-hourly-interval'>14.35 - 15.20</div>
+                </div>
+                <div class='s-head-hour'>
+                  <div class='s-number'>9</div>
+                  <div class='s-hourly-interval'>15.25 - 16.10</div>
+                </div>
+              </div>
+              <div class='s-rows-container'>
+                <div class='s-activities'>
+                  <div class='s-act-row'>
+                    <div class='s-act-tab green' data-hours='9.00-10.00'>
+                      <div class='s-act-name'>МРЗвИС</div>
+                      <div class='s-wrapper'>
+                        <div class='s-act-teacher'>В.П. Ивашенко</div>
+                        <div class='s-act-room'>3</div>
+                        <div class='s-act-group'>Высокая</div>
+                      </div>
+                    </div>
+                    <div class='s-act-tab orange' data-hours='15.45-18.50'>
+                      <div class='s-act-name'>Пары</div>
+                      <div class='s-wrapper'>
+                        <div class='s-act-teacher'></div>
+                        <div class='s-act-room'>3</div>
+                      </div>
+                    </div>
+                    <div class='s-act-tab green' data-hours='13.45-14.30'>
+                      <div class='s-act-name'>ПБЗ</div>
+                      <div class='s-wrapper'>
+                        <div class='s-act-teacher'>Д.В. Шункевич</div>
+                        <div class='s-act-room'>2</div>
+                        <div class='s-act-group'>Средняя</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='s-act-row'>
+                    <div class='s-act-tab blue' data-hours='8.50-10.08'>
+                      <div class='s-act-name'>{* subject[0]*} <strong>({* lesson_type[0]*})</strong></div>
+                      <div class='s-wrapper'>
+                        <div class='s-act-teacher'>Д.В. Шункевич</div>
+                        <div class='s-act-room'>3</div>
+                        <div class='s-act-group'>Высокая</div>
+                      </div>
+                    </div>
+                    <div class='s-act-tab black' data-hours='10.50-13.35'>
+                      <div class='s-act-name'>Пары</div>
+                      <div class='s-wrapper'>
+                        <div class='s-act-teacher'></div>
+                        <div class='s-act-room'>121</div>
+                      </div>
+                    </div>
+                    <div class='s-act-tab orange' data-hours='14.15-15.20'>
+                      <div class='s-act-name'>ОС</div>
+                      <div class='s-wrapper'>
+                        <div class='s-act-teacher'>М.В. Ковалёв</div>
+                        <div class='s-act-room'>2</div>
+                        <div class='s-act-group'>Средняя</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='s-act-row'></div>
+                  <div class='s-act-row'>
+                    <div class='s-act-tab blue' data-hours='7.10-7.55'>
+                      <div class='s-act-name'>СиМОИБ</div>
+                      <div class='s-wrapper'>
+                        <div class='s-act-teacher'>В.В. Захаров</div>
+                        <div class='s-act-room'>1</div>
+                        <div class='s-act-group'>Легкая</div>
+                      </div>
+                    </div>
+                    <div class='s-act-tab red' data-hours='8.23-12.50'>
+                      <div class='s-act-name'>Пары</div>
+                      <div class='s-wrapper'>
+                        <div class='s-act-teacher'></div>
+                        <div class='s-act-room'>3</div>
+                      </div>
+                    </div>
+                    <div class='s-act-tab pink' data-hours='14.35-16.10'>
+                      <div class='s-act-name'>ППвИС</div>
+                      <div class='s-wrapper'>
+                        <div class='s-act-teacher'>А. Баснина</div>
+                        <div class='s-act-room'>1</div>
+                        <div class='s-act-group'>Легкая</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='s-act-row'></div>
+                </div>
+                <div class='s-row s-hour-row'>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                </div>
+                <div class='s-row s-hour-row'>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                </div>
+                <div class='s-row s-hour-row'>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                </div>
+                <div class='s-row s-hour-row'>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                </div>
+                <div class='s-row s-hour-row'>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                </div>
+                <div class='s-row s-hour-row'>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                </div>
+                <div class='s-row s-hour-row'>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                </div>
+                <div class='s-row s-hour-row'>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                </div>
+                <div class='s-row s-hour-row'>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                </div>
+                <div class='s-row s-hour-row'>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                  <div class='s-hour-wrapper s-cell'>
+                    <div class='s-half-hour'></div>
+                    <div class='s-half-hour'></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        {% endblock %}
+
+        {% block message %}
+        
+        <div class="messages-section">
+        <button class="messages-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="15" y1="9" x2="9" y2="15" />
+            <line x1="9" y1="9" x2="15" y2="15" />
+          </svg>
+        </button>
+        <div class="projects-section-header">
+          <p>Сообщения</p>
+        </div>
+        <div class="messages">
+          <div class="message-box">
+            <img src="{% static 'studentapp/assets/images/serdyukov.jpg' %}">
+            <div class="message-content">
+              <div class="message-header">
+                <div class="name">Сердюков Р.Е.</div>
+                <div class="star-checkbox">
+                  <input type="checkbox" id="star-1">
+                  <label for="star-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <p class="message-line">
+                Здравствуйте, проверил вашу работу поздравляю 🥳, вы прошли сессию на отлично.
+              </p>
+              <p class="message-line time">
+                Dec, 12
+              </p>
+            </div>
+          </div>
+          <div class="message-box">
+            <img src="{% static 'studentapp/assets/images/20.png' %}">
+            <div class="message-content">
+              <div class="message-header">
+                <div class="name">Ивашенко В. П.</div>
+                <div class="star-checkbox">
+                  <input type="checkbox" id="star-2">
+                  <label for="star-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <p class="message-line">
+               Добрый день, проверил и прокоментировал вашу работу.
+              </p>
+              <p class="message-line time">
+                Dec, 12
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="projects-section-header">
+          <a href="{% url 'studentapp:schedules' %}"> <p>Расписания</p> </a>
+        </div>
+        <div class="wrap">
+          <div class="table-wrapper">
+            <table class="table-responsive card-list-table">
+              <thead>
+                <tr>
+                  <th>Предмет</th>
+                  <th>Кабинет</th>
+                  <th>Время</th>
+                </tr>
+              </thead>
+               <tbody id='app'>
+                <tr>
+                  <td data-title="Группа">   {* studentGroupDto[0] *}</td>
+                  <td data-title="День">   {* weekDay[0] *}</td>
+                  <td data-title="Предмет">   {* subject[0]*} <strong>({* lesson_type[0]*})</strong></td>
+                  <td data-title="Кабинет">   {* auditory[0] *}</td>
+                  <td data-title="Время">   {* lessonTime[0] *}</td>
+                </tr>
+               <tr>
+                  <td data-title="Группа">   {* group[0] *}</td>
+                  <td data-title="День">   {* weekDay[1] *}</td>
+                  <td data-title="Предмет">   {* subject[1]*} <strong>({* lesson_type[1]*})</strong></td>
+                  <td data-title="Кабинет">   {* auditory[1] *}</td>
+                  <td data-title="Время">   {* lessonTime[1] *}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="live-chat">
+
+        <header class="clearfix2">
+            <a href="#" class="chat-close">x</a>
+            <h4>Helper Bot</h4>
+            <span class="chat-message-counter">1</span>
+        </header>
+
+        <div class="chat">
+            <div class="chat-history">
+                <div class="chat-message clearfix2">
+                    <img src="{% static 'studentapp/assets/images/fs.png' %}" alt="" width="32" height="32">
+                    <div class="chat-message-content clearfix2">
+                        <h5>Bot</h5>
+                        <p>Добро пожаловать на платформу поддержки студентам</p>
+                    </div>
+                    <!-- end chat-message-content -->
+                </div>
+            </div>
+            <!-- end chat-history -->
+            <form id="chating" onsubmit="return false;">
+                <fieldset>
+                    <input id="text" type="text" placeholder="Что вы хотите узнать" autofocus>
+                    <input type="hidden">
+                </fieldset>
+            </form>
+        </div>
+        <!-- end chat -->
+
+    </div>
+    <!-- end live-chat -->
+
+    </div>
+        {% endblock %}
